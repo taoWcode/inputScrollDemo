@@ -11,8 +11,27 @@
         <div style="height: 300px"></div>
         <input type="text" id="input-2"/>
     </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script>
-        
+        $(function(){
+            $('#input-1,#input-2').focus(function(){
+                var u = navigator.userAgent;
+                var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+                if(isAndroid){
+                    $('body').height($('body').height + 300);
+                    $('body').scrollTop(300);
+                }
+            })
+
+            $('#input-1,#input-2').blur(function(){
+                var u = navigator.userAgent;
+                var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+                if(isAndroid){
+                    $('body').height($('body').height - 300);
+                    $('body').scrollTop(0);
+                }
+            })
+        })
     </script>
 </body>
 </html>
