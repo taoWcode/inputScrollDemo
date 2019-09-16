@@ -16,8 +16,12 @@
     <script>
         $(function(){
             $('#input-1,#input-2').focus(function(){
-                this.scrollIntoView(true);
-                this.scrollIntoViewIfNeeded();
+                var u = navigator.userAgent;
+                var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+                if(isAndroid){
+                    this.scrollIntoView(true);
+                    this.scrollIntoViewIfNeeded();
+                }
             })
             //
             // $('#input-1,#input-2').blur(function(){
