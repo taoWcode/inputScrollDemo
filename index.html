@@ -4,13 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>用来测试软键盘弹出遮挡弹出框问题</title>
+    <style>
+        .btn{
+            display: block;
+            width: 200px;
+            text-align: center;
+            margin:10px auto 0;
+            border:1px solid #ddd;
+            text-decoration: none;
+        }
+        .btn-1{
+            font-size: 14px;
+            line-height: 30px;
+            height: 30px;
+        }
+        .btn-2{
+            font-size: 14px;
+            line-height: 34.5px;
+            height: 34.5px;
+        }
+        .btn-3{
+            font-size: 17px;
+            line-height: 34.5px;
+            height: 34.5px;
+        }
+
+        .btn-4{
+            font-size: 14px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-5{
+            font-size: 17px;
+            height: 34.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-6{
+            font-size: 14px;
+            line-height: 1;
+            padding:7px 0;
+        }
+        .btn-7{
+            font-size: 17px;
+            line-height: 1;
+            padding:8px 0;
+        }
+        .btn-7{
+            font-size: 21.5px;
+            line-height: 1;
+            padding:8px 0;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="scroll-view">
+    <div class="scroll-view" >
         <div style="height: 600px"></div>
         <input type="text" id="input-1"/>
         <div style="height: 300px"></div>
         <input type="text" id="input-2"/>
+
+        <div>
+            <a href="javascript:void(0)" class="btn btn-1">真心英雄 12 30 30</a>
+            <a href="javascript:void(0)" class="btn btn-2">真心英雄 14 34.5 34.5 </a>
+            <a href="javascript:void(0)" class="btn btn-3">真心英雄 17 34.5 34.5 </a>
+            <a href="javascript:void(0)" class="btn btn-4">真心英雄 14 30 flex</a>
+            <a href="javascript:void(0)" class="btn btn-5">真心英雄 17 34.5 flex</a>
+            <a href="javascript:void(0)" class="btn btn-6">真心英雄 f14 l1 pv7</a>
+            <a href="javascript:void(0)" class="btn btn-7">真心英雄 f17 l1 pv7</a>
+            <a href="javascript:void(0)" class="btn btn-8">真心英雄 f21.5 l1 pv7</a>
+        </div>
+
+        <div>
+            <a href="javascript:void(0)" class="btn btn-1">EngLish</a>
+            <a href="javascript:void(0)" class="btn btn-2">EngLish</a>
+            <a href="javascript:void(0)" class="btn btn-3">pppppp </a>
+            <a href="javascript:void(0)" class="btn btn-4">llllll</a>
+            <a href="javascript:void(0)" class="btn btn-5">EngLish</a>
+            <a href="javascript:void(0)" class="btn btn-6">EngLish</a>
+            <a href="javascript:void(0)" class="btn btn-7">EngLish</a>
+            <a href="javascript:void(0)" class="btn btn-8">EngLish</a>
+        </div>
+        <div>
+            <a href="javascript:void(0)" class="btn btn-1">1234576</a>
+            <a href="javascript:void(0)" class="btn btn-2">1234576</a>
+            <a href="javascript:void(0)" class="btn btn-3">1234576 </a>
+            <a href="javascript:void(0)" class="btn btn-4">1234576</a>
+            <a href="javascript:void(0)" class="btn btn-5">1234576</a>
+            <a href="javascript:void(0)" class="btn btn-6">1234576</a>
+            <a href="javascript:void(0)" class="btn btn-7">1234576</a>
+            <a href="javascript:void(0)" class="btn btn-8">1234576</a>
+        </div>
+
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script>
@@ -23,15 +112,6 @@
                     this.scrollIntoViewIfNeeded();
                 }
             })
-            //
-            // $('#input-1,#input-2').blur(function(){
-            //     var u = navigator.userAgent;
-            //     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-            //     if(isAndroid){
-            //         $('body').height($('body').height - 300);
-            //         $('body').scrollTop(0);
-            //     }
-            // })
         })
     </script>
 </body>
