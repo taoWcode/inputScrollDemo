@@ -31,7 +31,7 @@
         .container-hidden{
             overflow: hidden;
             height: 100%;
-            background: white;
+            background: green;
         }
         .list li{
             height: 200px;
@@ -69,25 +69,25 @@
             <li>5</li>
             <li>6</li>
         </ul>
-        <span class="mask"></span>
     </div>
+    <span class="mask"></span>
     <script>
         const $container = document.getElementsByClassName('container')[0];
         const $btn = document.getElementsByTagName('button')[0];
         const $mask = document.getElementsByClassName('mask')[0];
         const $list = document.getElementsByClassName('list')[0];
 
-        $btn.addEventListener('click',function (){
-            $mask.style.display = 'block';
-            $container.className = 'container container-hidden';
-            //$list.className = 'list container-hidden';
-        });
+        // $btn.addEventListener('click',function (){
+        //     $mask.style.display = 'block';
+        //     $container.className = 'container container-hidden';
+        //     $list.className = 'list container-hidden';
+        // });
 
-        $mask.addEventListener('click',function (){
-            $mask.style.display = 'none';
-            $container.className = 'container';
-            //$list.className = 'list';
-        });
+        // $mask.addEventListener('click',function (){
+        //     $mask.style.display = 'none';
+        //     $container.className = 'container';
+        //     $list.className = 'list';
+        // });
     </script>
 </body>
 </html>
