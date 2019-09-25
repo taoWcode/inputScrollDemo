@@ -30,7 +30,7 @@
             overflow-y:auto;
             -webkit-overflow-scrolling: touch;
             overflow-x: hidden;
-            background: green;
+            background: blue;
             position: relative;
             z-index: 1;
         }
@@ -85,11 +85,11 @@
         const $list = document.getElementsByClassName('list')[0];
         let idx = 0;
 
-        document.addEventListener('touchmove',function(e){
+        document.addEventListener('touchmove',function(event){
             idx++;
             $btn.innerHTML = idx;
-            return false;
-            e.preventDefault();
+            event.stopPropagation();
+            event.nativeEvent.stopImmediatePropagation();
         });
 
         $btn.addEventListener('click',function (){
