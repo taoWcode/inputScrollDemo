@@ -74,7 +74,13 @@
         const $container = document.getElementsByClassName('container')[0];
         const $btn = document.getElementsByTagName('button')[0];
         const $mask = document.getElementsByClassName('mask')[0];
-        const $list = document.getElementsByClassName('list')[0]
+        const $list = document.getElementsByClassName('list')[0];
+        const $body = document.documentElement;
+
+        $body.addEventListener('touchstart',function(e){
+            e.preventDefault();
+        })
+
         $btn.addEventListener('click',function (){
             $mask.style.display = 'block';
             //$container.className = 'container container-hidden';
