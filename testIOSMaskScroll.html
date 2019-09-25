@@ -33,7 +33,7 @@
         .container-hidden{
             overflow: hidden;
             height: 100%;
-            background: red;
+            background: white;
         }
         .list li{
             height: 200px;
@@ -82,13 +82,13 @@
         $btn.addEventListener('click',function (){
             $mask.style.display = 'block';
             $container.className = 'container container-hidden';
-            $list.className = 'list container-hidden';
+            //$list.className = 'list container-hidden';
         });
 
         $mask.addEventListener('click',function (){
             $mask.style.display = 'none';
             $container.className = 'container';
-            $list.className = 'list';
+            //$list.className = 'list';
         });
     </script>
 </body>
