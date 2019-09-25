@@ -19,7 +19,7 @@
             padding: 0;
             -webkit-tap-highlight-color: transparent;
         }
-        body{
+        html,body{
             height: 100%;
             overflow: hidden;
         }
@@ -75,7 +75,6 @@
         const $btn = document.getElementsByTagName('button')[0];
         const $mask = document.getElementsByClassName('mask')[0];
         const $list = document.getElementsByClassName('list')[0];
-        const $body = document.documentElement;
 
         $btn.addEventListener('click',function (){
             $mask.style.display = 'block';
