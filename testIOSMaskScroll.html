@@ -30,7 +30,7 @@
             overflow-y:auto;
             -webkit-overflow-scrolling: touch;
             overflow-x: hidden;
-            background: blue;
+            background: green;
             position: relative;
             z-index: 1;
         }
@@ -85,7 +85,7 @@
         const $list = document.getElementsByClassName('list')[0];
         let idx = 0;
 
-        document.getElementsByTagName('body')[0].addEventListener('touchmove',function(e){
+        document.addEventListener('touchmove',function(e){
             idx++;
             $btn.innerHTML = idx;
             e.preventDefault();
