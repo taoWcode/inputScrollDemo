@@ -88,6 +88,7 @@
         document.addEventListener('touchmove',function(e){
             idx++;
             $btn.innerHTML = idx;
+            return false;
             e.preventDefault();
         });
 
