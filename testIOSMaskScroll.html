@@ -28,6 +28,9 @@
             overflow-y:auto;
             overflow-x: hidden;
         }
+        .container-hidden{
+            overflow: hidden;
+        }
         .list li{
             height: 200px;
             line-height: 200px;
@@ -46,10 +49,15 @@
             top:0;
             background: rgba(0,0,0,.7);
         }
+        button{
+            margin:20px auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <button>开启mask</button>
         <ul class="list">
             <li>1</li>
             <li>2</li>
@@ -61,7 +69,18 @@
         <span class="mask"></span>
     </div>
     <script>
+        const $container = document.getElementsByClassName('container')[0];
+        const $btn = document.getElementsByTagName('button')[0];
+        const $mask = document.getElementsByClassName('mask')[0];
+        $btn.addEventListener('click',function (){
+            $mask.style.display = 'block';
+            $container.className = 'container container-hidden';
+        });
 
+        $mask.addEventListener('click',function (){
+            $mask.style.display = 'block';
+            $container.className = 'container';
+        });
     </script>
 </body>
 </html>
