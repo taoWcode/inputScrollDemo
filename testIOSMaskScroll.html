@@ -63,7 +63,7 @@
         }
     </style>
 </head>
-<body>
+<body ontouchstart="function(e){return false}">
     <div class="container">
         <button>开启mask</button>
         <ul class="list">
@@ -81,6 +81,7 @@
         const $btn = document.getElementsByTagName('button')[0];
         const $mask = document.getElementsByClassName('mask')[0];
         const $list = document.getElementsByClassName('list')[0];
+
 
         $btn.addEventListener('click',function (){
             $mask.style.display = 'block';
