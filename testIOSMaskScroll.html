@@ -29,6 +29,8 @@
             -webkit-overflow-scrolling: touch;
             overflow-x: hidden;
             background: yellow;
+            position: relative;
+            z-index: 1;
         }
         .container-hidden{
             overflow: hidden;
@@ -53,6 +55,7 @@
             top:0;
             background: rgba(0,0,0,.7);
             display: none;
+            z-index: 5;
         }
         button{
             margin:20px auto;
@@ -81,12 +84,12 @@
 
         $btn.addEventListener('click',function (){
             $mask.style.display = 'block';
-            //$container.className = 'container container-hidden';
+            $container.className = 'container container-hidden';
         });
 
         $mask.addEventListener('click',function (){
             $mask.style.display = 'none';
-            //$container.className = 'container';
+            $container.className = 'container';
         });
     </script>
 </body>
